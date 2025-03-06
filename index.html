@@ -288,7 +288,7 @@
 <!-- Sidebar/menu -->
 <nav class="w3-sidebar glass-card w3-bar-block w3-small w3-hide-small w3-center">
   <img src="Mahi.jpg" class="profile-img" style="width:70%; margin:24px auto;">
-  <a href="Home.html" class="nav-link active">
+  <a href="index.html" class="nav-link active">
     <i class="fas fa-home"></i>
     <span>HOME</span>
   </a>
@@ -308,7 +308,7 @@
 
 <!-- Mobile navigation -->
 <div class="mobile-nav w3-hide-large w3-hide-medium">
-  <a href="Home.html" class="active">
+  <a href="index.html" class="active">
     <i class="fas fa-home"></i>
     <span>Home</span>
   </a>
@@ -383,12 +383,12 @@
 <script>
 document.addEventListener('DOMContentLoaded', function() {
   // Active navigation highlighting
-  const currentPage = window.location.pathname.split("/").pop() || "Home.html";
+  const currentPage = window.location.pathname.split("/").pop() || "index.html";
   
   // Handle desktop navigation
   document.querySelectorAll('.nav-link').forEach(link => {
     const linkPage = link.getAttribute('href');
-    if (linkPage === currentPage || (currentPage === '' && linkPage === 'Home.html')) {
+    if (linkPage === currentPage || (currentPage === '' && linkPage === 'index.html')) {
       link.classList.add('active');
     } else {
       link.classList.remove('active');
@@ -398,7 +398,7 @@ document.addEventListener('DOMContentLoaded', function() {
   // Handle mobile navigation
   document.querySelectorAll('.mobile-nav a').forEach(link => {
     const linkPage = link.getAttribute('href');
-    if (linkPage === currentPage || (currentPage === '' && linkPage === 'Home.html')) {
+    if (linkPage === currentPage || (currentPage === '' && linkPage === 'index.html')) {
       link.classList.add('active');
     } else {
       link.classList.remove('active');
