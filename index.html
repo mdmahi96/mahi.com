@@ -257,7 +257,7 @@
     }
     
     /* Responsive Design */
-    @media only screen and (max-width: 992px) {
+    @media only screen and (max-width: 200px) {
       #main {
         margin-left: 0;
       }
@@ -269,26 +269,109 @@
       }
     }
 
-    @media only screen and (max-width: 768px) {
+    @media only screen and (max-width: 200px) {
       .w3-container {
         padding: 32px 16px;
       }
     }
 
-    @media only screen and (max-width: 600px) {
+    @media only screen and (max-width: 200px) {
       .custom-btn {
         display: block;
         width: 100%;
         margin-bottom: 10px;
       }
     }
-    </style>
+    
+	
+	
+	
+	
+	
+	
+	
+	
+	/* Mobile navigation profile picture */
+.mobile-profile-img {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  border: 2px solid var(--accent);
+  margin-bottom: 2px;
+  object-fit: cover;
+}
+
+/* Update mobile navigation styles */
+.mobile-nav {
+  display: none;
+  justify-content: space-around;
+  background: var(--card-bg);
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  padding: 8px;
+  box-shadow: 0 -5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.mobile-nav a {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: var(--text-primary);
+  text-decoration: none;
+  font-size: 0.7rem;
+}
+
+.mobile-nav a i {
+  font-size: 1.1rem;
+  margin-bottom: 2px;
+}
+
+/* Additional responsive adjustments */
+@media only screen and (max-width: 600px) {
+  .mobile-nav a {
+    padding: 4px;
+  }
+  
+  .section-title {
+    font-size: 2rem;
+  }
+  
+  h1 {
+    font-size: 36px !important;
+  }
+  
+  h3 {
+    font-size: 18px;
+  }
+  
+  p {
+    font-size: 14px;
+  }
+}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	</style>
 </head>
 <body>
 <!-- Sidebar/menu -->
 <nav class="w3-sidebar glass-card w3-bar-block w3-small w3-hide-small w3-center">
   <img src="Mahi.jpg" class="profile-img" style="width:70%; margin:24px auto;">
-  <a href="index.html" class="nav-link active">
+  <a href="Home.html" class="nav-link active">
     <i class="fas fa-home"></i>
     <span>HOME</span>
   </a>
@@ -308,8 +391,8 @@
 
 <!-- Mobile navigation -->
 <div class="mobile-nav w3-hide-large w3-hide-medium">
-  <a href="index.html" class="active">
-    <i class="fas fa-home"></i>
+  <a href="Home.html" class="active">
+    <img src="Mahi.jpg" class="mobile-profile-img">
     <span>Home</span>
   </a>
   <a href="About.html">
@@ -383,12 +466,12 @@
 <script>
 document.addEventListener('DOMContentLoaded', function() {
   // Active navigation highlighting
-  const currentPage = window.location.pathname.split("/").pop() || "index.html";
+  const currentPage = window.location.pathname.split("/").pop() || "Home.html";
   
   // Handle desktop navigation
   document.querySelectorAll('.nav-link').forEach(link => {
     const linkPage = link.getAttribute('href');
-    if (linkPage === currentPage || (currentPage === '' && linkPage === 'index.html')) {
+    if (linkPage === currentPage || (currentPage === '' && linkPage === 'Home.html')) {
       link.classList.add('active');
     } else {
       link.classList.remove('active');
@@ -398,7 +481,7 @@ document.addEventListener('DOMContentLoaded', function() {
   // Handle mobile navigation
   document.querySelectorAll('.mobile-nav a').forEach(link => {
     const linkPage = link.getAttribute('href');
-    if (linkPage === currentPage || (currentPage === '' && linkPage === 'index.html')) {
+    if (linkPage === currentPage || (currentPage === '' && linkPage === 'Home.html')) {
       link.classList.add('active');
     } else {
       link.classList.remove('active');
