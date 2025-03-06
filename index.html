@@ -44,7 +44,7 @@
     
     h1, h2, h3, h4, h5, h6 {
       font-family: 'Playfair Display', serif;
-      font-weight: 600;
+      font-weight: 280;
     }
 
     .w3-row-padding img {
@@ -189,108 +189,7 @@
       animation: fadeIn 0.8s ease forwards;
     }
 
-    /* Mobile Navigation */
-    .mobile-nav {
-      display: none;
-      justify-content: space-around;
-      background: var(--card-bg);
-      position: fixed;
-      bottom: 0;
-      left: 0;
-      right: 0;
-      z-index: 1000;
-      padding: 12px;
-      box-shadow: 0 -5px 15px rgba(0, 0, 0, 0.1);
-    }
-
-    .mobile-nav a {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      color: var(--text-primary);
-      text-decoration: none;
-      font-size: 0.8rem;
-    }
-
-    .mobile-nav a i {
-      font-size: 1.2rem;
-      margin-bottom: 4px;
-    }
-
-    .mobile-nav a.active {
-      color: var(--accent);
-    }
-    
-    /* Button styling */
-    .custom-btn {
-      background-color: var(--primary);
-      color: white;
-      border: none;
-      padding: 12px 25px;
-      border-radius: 50px;
-      transition: all 0.3s ease;
-      font-weight: 500;
-      text-transform: uppercase;
-      letter-spacing: 1px;
-      display: inline-block;
-      cursor: pointer;
-      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-    }
-    
-    .custom-btn:hover {
-      background-color: var(--secondary);
-      transform: translateY(-3px);
-      box-shadow: 0 8px 20px rgba(0,0,0,0.2);
-    }
-
-    /* Social icons */
-    .social-icon {
-      font-size: 1.5rem;
-      color: var(--text-primary);
-      transition: all 0.3s ease;
-      margin: 0 10px;
-    }
-
-    .social-icon:hover {
-      color: var(--accent);
-      transform: translateY(-3px);
-    }
-    
-    /* Responsive Design */
-    @media only screen and (max-width: 200px) {
-      #main {
-        margin-left: 0;
-      }
-      .w3-sidebar {
-        display: none;
-      }
-      .mobile-nav {
-        display: flex;
-      }
-    }
-
-    @media only screen and (max-width: 200px) {
-      .w3-container {
-        padding: 32px 16px;
-      }
-    }
-
-    @media only screen and (max-width: 200px) {
-      .custom-btn {
-        display: block;
-        width: 100%;
-        margin-bottom: 10px;
-      }
-    }
-    
-	
-	
-	
-	
-	
-	
-	
-	
+ 
 	/* Mobile navigation profile picture */
 .mobile-profile-img {
   width: 30px;
@@ -330,7 +229,7 @@
 }
 
 /* Additional responsive adjustments */
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 250px) {
   .mobile-nav a {
     padding: 4px;
   }
@@ -340,20 +239,81 @@
   }
   
   h1 {
-    font-size: 36px !important;
+    font-size: 15px !important;
   }
   
   h3 {
-    font-size: 18px;
+    font-size: 10px;
   }
   
   p {
-    font-size: 14px;
+    font-size: 5px;
   }
 }
 	
 	
 	
+    /* Button styling */
+    .custom-btn {
+      background-color: var(--primary);
+      color: white;
+      border: none;
+      padding: 12px 25px;
+      border-radius: 50px;
+      transition: all 0.3s ease;
+      font-weight: 500;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      display: inline-block;
+      cursor: pointer;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    }
+    
+    .custom-btn:hover {
+      background-color: var(--secondary);
+      transform: translateY(-3px);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+    }
+
+    /* Social icons */
+    .social-icon {
+      font-size: 1.5rem;
+      color: var(--text-primary);
+      transition: all 0.3s ease;
+      margin: 0 10px;
+    }
+
+    .social-icon:hover {
+      color: var(--accent);
+      transform: translateY(-3px);
+    }
+    
+    /* Responsive Design */
+    @media only screen and (max-width: 992px) {
+      #main {
+        margin-left: 0;
+      }
+      .w3-sidebar {
+        display: none;
+      }
+      .mobile-nav {
+        display: flex;
+      }
+    }
+
+    @media only screen and (max-width: 280px) {
+      .w3-container {
+        padding: 32px 16px;
+      }
+    }
+
+    @media only screen and (max-width: 600px) {
+      .custom-btn {
+        display: block;
+        width: 100%;
+        margin-bottom: 10px;
+      }
+    }
 	
 	
 	
@@ -363,9 +323,7 @@
 	
 	
 	
-	
-	
-	</style>
+    </style>
 </head>
 <body>
 <!-- Sidebar/menu -->
