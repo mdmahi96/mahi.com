@@ -44,7 +44,7 @@
     
     h1, h2, h3, h4, h5, h6 {
       font-family: 'Playfair Display', serif;
-      font-weight: 280;
+      font-weight: 600;
     }
 
     .w3-row-padding img {
@@ -189,70 +189,38 @@
       animation: fadeIn 0.8s ease forwards;
     }
 
- 
-	/* Mobile navigation profile picture */
-.mobile-profile-img {
-  width: 30px;
-  height: 30px;
-  border-radius: 50%;
-  border: 2px solid var(--accent);
-  margin-bottom: 2px;
-  object-fit: cover;
-}
+    /* Mobile Navigation */
+    .mobile-nav {
+      display: none;
+      justify-content: space-around;
+      background: var(--card-bg);
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      z-index: 1000;
+      padding: 12px;
+      box-shadow: 0 -5px 15px rgba(0, 0, 0, 0.1);
+    }
 
-/* Update mobile navigation styles */
-.mobile-nav {
-  display: none;
-  justify-content: space-around;
-  background: var(--card-bg);
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  z-index: 1000;
-  padding: 8px;
-  box-shadow: 0 -5px 15px rgba(0, 0, 0, 0.1);
-}
+    .mobile-nav a {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      color: var(--text-primary);
+      text-decoration: none;
+      font-size: 0.8rem;
+    }
 
-.mobile-nav a {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  color: var(--text-primary);
-  text-decoration: none;
-  font-size: 0.7rem;
-}
+    .mobile-nav a i {
+      font-size: 1.2rem;
+      margin-bottom: 4px;
+    }
 
-.mobile-nav a i {
-  font-size: 1.1rem;
-  margin-bottom: 2px;
-}
-
-/* Additional responsive adjustments */
-@media only screen and (max-width: 250px) {
-  .mobile-nav a {
-    padding: 4px;
-  }
-  
-  .section-title {
-    font-size: 2rem;
-  }
-  
-  h1 {
-    font-size: 15px !important;
-  }
-  
-  h3 {
-    font-size: 10px;
-  }
-  
-  p {
-    font-size: 5px;
-  }
-}
-	
-	
-	
+    .mobile-nav a.active {
+      color: var(--accent);
+    }
+    
     /* Button styling */
     .custom-btn {
       background-color: var(--primary);
@@ -301,7 +269,7 @@
       }
     }
 
-    @media only screen and (max-width: 280px) {
+    @media only screen and (max-width: 768px) {
       .w3-container {
         padding: 32px 16px;
       }
@@ -314,15 +282,6 @@
         margin-bottom: 10px;
       }
     }
-	
-	
-	
-	
-	
-	
-	
-	
-	
     </style>
 </head>
 <body>
@@ -350,7 +309,7 @@
 <!-- Mobile navigation -->
 <div class="mobile-nav w3-hide-large w3-hide-medium">
   <a href="index.html" class="active">
-    <img src="Mahi.jpg" class="mobile-profile-img">
+    <i class="fas fa-home"></i>
     <span>Home</span>
   </a>
   <a href="About.html">
