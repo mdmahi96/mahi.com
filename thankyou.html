@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thank You | Muztaba Rafid</title>
+    <link rel="icon" type="image/x-icon" href="Mahi.jpg">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        .thank-you-container {
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 20px;
+        }
+        
+        .thank-you-icon {
+            font-size: 5rem;
+            color: var(--primary);
+            margin-bottom: 20px;
+            animation: pulse 2s infinite;
+        }
+        
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.1); }
+            100% { transform: scale(1); }
+        }
+        
+        .thank-you-title {
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+            color: var(--text-primary);
+        }
+        
+        .thank-you-message {
+            font-size: 1.2rem;
+            margin-bottom: 30px;
+            color: var(--text-secondary);
+            max-width: 600px;
+        }
+        
+        .back-btn {
+            background: linear-gradient(45deg, var(--primary), var(--secondary));
+            color: white;
+            padding: 12px 25px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            display: inline-flex;
+            align-items: center;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+        }
+        
+        .back-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+        }
+        
+        .back-btn i {
+            margin-right: 8px;
+        }
+    </style>
+</head>
+<body class="w3-black">
+    <div class="thank-you-container">
+        <i class="fas fa-check-circle thank-you-icon"></i>
+        <h1 class="thank-you-title">Thank You!</h1>
+        <p class="thank-you-message">Your message has been sent successfully. I'll get back to you as soon as possible.</p>
+        <a href="index.html" class="back-btn">
+            <i class="fas fa-home"></i> Back to Homepage
+        </a>
+    </div>
+    
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const themes = {
+          default: { 
+            primary: '#3a86ff', 
+            secondary: '#ff006e', 
+            background: '#111827',
+            sidebarBg: '#1e293b',
+            cardBg: 'rgba(30, 41, 59, 0.7)',
+            textPrimary: '#f1f5f9',
+            textSecondary: '#94a3b8'
+          },
+          dark: { 
+            primary: '#8b5cf6', 
+            secondary: '#ec4899', 
+            background: '#09090b',
+            sidebarBg: '#18181b',
+            cardBg: 'rgba(24, 24, 27, 0.7)',
+            textPrimary: '#f1f5f9',
+            textSecondary: '#94a3b8'
+          },
+          elegant: { 
+            primary: '#10b981', 
+            secondary: '#f59e0b', 
+            background: '#0f172a',
+            sidebarBg: '#1e293b',
+            cardBg: 'rgba(30, 41, 59, 0.7)',
+            textPrimary: '#f1f5f9',
+            textSecondary: '#94a3b8'
+          }
+        };
+        
+        // Apply default theme
+        document.documentElement.style.setProperty('--primary', themes.default.primary);
+        document.documentElement.style.setProperty('--secondary', themes.default.secondary);
+        document.documentElement.style.setProperty('--background', themes.default.background);
+        document.documentElement.style.setProperty('--sidebar-bg', themes.default.sidebarBg);
+        document.documentElement.style.setProperty('--card-bg', themes.default.cardBg);
+        document.documentElement.style.setProperty('--text-primary', themes.default.textPrimary);
+        document.documentElement.style.setProperty('--text-secondary', themes.default.textSecondary);
+    });
+    </script>
+</body>
+</html>
